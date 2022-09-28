@@ -1,0 +1,7 @@
+table:
+  name: collection_creator
+  schema: public
+object_relationships:
+  - name: collection
+    using:
+      foreign_key_constraint_on: collection_id

@@ -1,0 +1,13 @@
+table:
+  name: block
+  schema: public
+select_permissions:
+  - role: test
+    permission:
+      columns:
+        - height
+        - hash
+        - block
+        - timestamp
+      filter: {}
+      allow_aggregations: true

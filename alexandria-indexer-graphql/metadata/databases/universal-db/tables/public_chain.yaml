@@ -1,0 +1,25 @@
+table:
+  name: chain
+  schema: public
+array_relationships:
+  - name: crypto_rates
+    using:
+      foreign_key_constraint_on:
+        column: chain_id
+        table:
+          name: crypto_rate
+          schema: public
+  - name: nft_meta
+    using:
+      foreign_key_constraint_on:
+        column: chain_id
+        table:
+          name: nft_meta
+          schema: public
+  - name: smart_contracts
+    using:
+      foreign_key_constraint_on:
+        column: chain_id
+        table:
+          name: smart_contract
+          schema: public

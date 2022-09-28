@@ -1,0 +1,9 @@
+- name: stx_data_lake_db
+  kind: postgres
+  configuration:
+    connection_info:
+      database_url:
+        from_env: DB_CONN_ENV
+      isolation_level: read-committed
+      use_prepared_statements: false
+  tables: "!include stx_data_lake_db/tables/tables.yaml"

@@ -1,0 +1,15 @@
+table:
+  name: collection_attribute
+  schema: public
+object_relationships:
+  - name: collection
+    using:
+      foreign_key_constraint_on: collection_id
+array_relationships:
+  - name: bid_attributes
+    using:
+      foreign_key_constraint_on:
+        column: collection_attribute_id
+        table:
+          name: bid_attribute
+          schema: public

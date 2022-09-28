@@ -1,0 +1,25 @@
+table:
+  name: bid_state
+  schema: public
+object_relationships:
+  - name: collection
+    using:
+      foreign_key_constraint_on: collection_id
+  - name: smart_contract
+    using:
+      foreign_key_constraint_on: smart_contract_id
+array_relationships:
+  - name: bid_attributes
+    using:
+      foreign_key_constraint_on:
+        column: bid_id
+        table:
+          name: bid_attribute
+          schema: public
+  - name: bid_state_nft_meta
+    using:
+      foreign_key_constraint_on:
+        column: bid_id
+        table:
+          name: bid_state_nft_meta
+          schema: public

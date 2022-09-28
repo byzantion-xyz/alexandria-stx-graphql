@@ -1,0 +1,3 @@
+table:
+  name: apikey
+  schema: public

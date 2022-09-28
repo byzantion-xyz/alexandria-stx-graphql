@@ -1,0 +1,10 @@
+table:
+  name: bid_state_nft_meta
+  schema: public
+object_relationships:
+  - name: bid_state
+    using:
+      foreign_key_constraint_on: bid_id
+  - name: nft_metum
+    using:
+      foreign_key_constraint_on: meta_id

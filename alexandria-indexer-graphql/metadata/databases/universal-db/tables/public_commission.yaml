@@ -1,0 +1,29 @@
+table:
+  name: commission
+  schema: public
+object_relationships:
+  - name: smart_contract
+    using:
+      foreign_key_constraint_on: smart_contract_id
+array_relationships:
+  - name: actions
+    using:
+      foreign_key_constraint_on:
+        column: commission_id
+        table:
+          name: action
+          schema: public
+  - name: nft_state_lists
+    using:
+      foreign_key_constraint_on:
+        column: commission_id
+        table:
+          name: nft_state_list
+          schema: public
+  - name: smart_contracts
+    using:
+      foreign_key_constraint_on:
+        column: default_commission_id
+        table:
+          name: smart_contract
+          schema: public

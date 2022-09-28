@@ -1,0 +1,15 @@
+table:
+  name: nft_meta_attribute
+  schema: public
+object_relationships:
+  - name: nft_metum
+    using:
+      foreign_key_constraint_on: meta_id
+array_relationships:
+  - name: megapont_attributes
+    using:
+      foreign_key_constraint_on:
+        column: nft_meta_attribute_id
+        table:
+          name: megapont_attribute
+          schema: public

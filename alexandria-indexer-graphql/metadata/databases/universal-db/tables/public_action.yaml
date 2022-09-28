@@ -1,0 +1,19 @@
+table:
+  name: action
+  schema: public
+object_relationships:
+  - name: collection
+    using:
+      foreign_key_constraint_on: collection_id
+  - name: commission
+    using:
+      foreign_key_constraint_on: commission_id
+  - name: nft_metum
+    using:
+      foreign_key_constraint_on: nft_meta_id
+  - name: smartContractBySmartContractId
+    using:
+      foreign_key_constraint_on: smart_contract_id
+  - name: smart_contract
+    using:
+      foreign_key_constraint_on: marketplace_smart_contract_id

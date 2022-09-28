@@ -1,0 +1,49 @@
+table:
+  name: nft_meta
+  schema: public
+object_relationships:
+  - name: chain
+    using:
+      foreign_key_constraint_on: chain_id
+  - name: collection
+    using:
+      foreign_key_constraint_on: collection_id
+  - name: smart_contract
+    using:
+      foreign_key_constraint_on: smart_contract_id
+array_relationships:
+  - name: actions
+    using:
+      foreign_key_constraint_on:
+        column: nft_meta_id
+        table:
+          name: action
+          schema: public
+  - name: bid_state_nft_meta
+    using:
+      foreign_key_constraint_on:
+        column: meta_id
+        table:
+          name: bid_state_nft_meta
+          schema: public
+  - name: nft_meta_attributes
+    using:
+      foreign_key_constraint_on:
+        column: meta_id
+        table:
+          name: nft_meta_attribute
+          schema: public
+  - name: nft_meta_bns
+    using:
+      foreign_key_constraint_on:
+        column: meta_id
+        table:
+          name: nft_meta_bns
+          schema: public
+  - name: nft_states
+    using:
+      foreign_key_constraint_on:
+        column: meta_id
+        table:
+          name: nft_state
+          schema: public

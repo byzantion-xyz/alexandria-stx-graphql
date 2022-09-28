@@ -1,0 +1,84 @@
+table:
+  name: smart_contract
+  schema: public
+object_relationships:
+  - name: chain
+    using:
+      foreign_key_constraint_on: chain_id
+  - name: commission
+    using:
+      foreign_key_constraint_on: default_commission_id
+  - name: smart_contract
+    using:
+      foreign_key_constraint_on: custodial_smart_contract_id
+array_relationships:
+  - name: actions
+    using:
+      foreign_key_constraint_on:
+        column: marketplace_smart_contract_id
+        table:
+          name: action
+          schema: public
+  - name: actionsBySmartContractId
+    using:
+      foreign_key_constraint_on:
+        column: smart_contract_id
+        table:
+          name: action
+          schema: public
+  - name: bid_states
+    using:
+      foreign_key_constraint_on:
+        column: smart_contract_id
+        table:
+          name: bid_state
+          schema: public
+  - name: collections
+    using:
+      foreign_key_constraint_on:
+        column: smart_contract_id
+        table:
+          name: collection
+          schema: public
+  - name: commissions
+    using:
+      foreign_key_constraint_on:
+        column: smart_contract_id
+        table:
+          name: commission
+          schema: public
+  - name: nft_meta
+    using:
+      foreign_key_constraint_on:
+        column: smart_contract_id
+        table:
+          name: nft_meta
+          schema: public
+  - name: nft_state_lists
+    using:
+      foreign_key_constraint_on:
+        column: list_contract_id
+        table:
+          name: nft_state_list
+          schema: public
+  - name: nft_states
+    using:
+      foreign_key_constraint_on:
+        column: staked_contract_id
+        table:
+          name: nft_state
+          schema: public
+  - name: smart_contract_functions
+    using:
+      foreign_key_constraint_on:
+        column: smart_contract_id
+        table:
+          name: smart_contract_function
+          schema: public
+  - name: smart_contracts
+    using:
+      foreign_key_constraint_on:
+        column: custodial_smart_contract_id
+        table:
+          name: smart_contract
+          schema: public

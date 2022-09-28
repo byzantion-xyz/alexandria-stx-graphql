@@ -1,0 +1,3 @@
+table:
+  name: collection_trending
+  schema: public

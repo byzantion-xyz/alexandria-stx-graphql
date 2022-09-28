@@ -1,0 +1,3 @@
+table:
+  name: all_collections
+  schema: public

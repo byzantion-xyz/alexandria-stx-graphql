@@ -1,0 +1,10 @@
+table:
+  name: bid_attribute
+  schema: public
+object_relationships:
+  - name: bid_state
+    using:
+      foreign_key_constraint_on: bid_id
+  - name: collection_attribute
+    using:
+      foreign_key_constraint_on: collection_attribute_id

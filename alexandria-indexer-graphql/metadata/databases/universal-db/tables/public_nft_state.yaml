@@ -1,0 +1,18 @@
+table:
+  name: nft_state
+  schema: public
+object_relationships:
+  - name: nft_metum
+    using:
+      foreign_key_constraint_on: meta_id
+  - name: smart_contract
+    using:
+      foreign_key_constraint_on: staked_contract_id
+array_relationships:
+  - name: nft_state_lists
+    using:
+      foreign_key_constraint_on:
+        column: nft_state_id
+        table:
+          name: nft_state_list
+          schema: public

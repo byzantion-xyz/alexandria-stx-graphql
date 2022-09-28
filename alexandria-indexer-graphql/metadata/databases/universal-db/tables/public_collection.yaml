@@ -1,0 +1,43 @@
+table:
+  name: collection
+  schema: public
+object_relationships:
+  - name: smart_contract
+    using:
+      foreign_key_constraint_on: smart_contract_id
+array_relationships:
+  - name: actions
+    using:
+      foreign_key_constraint_on:
+        column: collection_id
+        table:
+          name: action
+          schema: public
+  - name: bid_states
+    using:
+      foreign_key_constraint_on:
+        column: collection_id
+        table:
+          name: bid_state
+          schema: public
+  - name: collection_attributes
+    using:
+      foreign_key_constraint_on:
+        column: collection_id
+        table:
+          name: collection_attribute
+          schema: public
+  - name: collection_creators
+    using:
+      foreign_key_constraint_on:
+        column: collection_id
+        table:
+          name: collection_creator
+          schema: public
+  - name: nft_meta
+    using:
+      foreign_key_constraint_on:
+        column: collection_id
+        table:
+          name: nft_meta
+          schema: public

@@ -1,0 +1,13 @@
+table:
+  name: nft_state_list
+  schema: public
+object_relationships:
+  - name: commission
+    using:
+      foreign_key_constraint_on: commission_id
+  - name: nft_state
+    using:
+      foreign_key_constraint_on: nft_state_id
+  - name: smart_contract
+    using:
+      foreign_key_constraint_on: list_contract_id

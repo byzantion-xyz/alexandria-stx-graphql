@@ -1,0 +1,11 @@
+- name: universal-db
+  kind: postgres
+  configuration:
+    connection_info:
+      database_url:
+        from_env: DB_CONN_ENV
+      isolation_level: read-committed
+      use_prepared_statements: false
+  customization:
+    naming_convention: hasura-default
+  tables: "!include universal-db/tables/tables.yaml"
