@@ -11,7 +11,7 @@ In order to implement and run this GraphQL layer, the following needs to be in p
 - [Alexandria STX Data Lake](https://github.com/byzantion-xyz/alexandria-stx-datalake)
 - [Alexandria STX Indexer](https://github.com/byzantion-xyz/alexandria-stx-indexer)
 
-Please refer to the repositories of these open source projects for all instructions on how to set them up. Once you have configures and installed them, and your database is up, ensure that you have the database connection URLs handy for the setup of the GraphQL layer.
+Please refer to the repositories of these open source projects for all instructions on how to set them up. Once you have configured and installed them, and your database is up, ensure that you have the database connection URLs handy for the setup of the GraphQL layer.
 
 ## Implementation
 
