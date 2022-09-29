@@ -2,6 +2,6 @@ table:
   name: nft_meta_bns
   schema: public
 object_relationships:
-  - name: nft_metum
+  - name: nft_meta
     using:
       foreign_key_constraint_on: meta_id

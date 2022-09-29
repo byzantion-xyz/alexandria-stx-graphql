@@ -5,6 +5,6 @@ object_relationships:
   - name: bid_state
     using:
       foreign_key_constraint_on: bid_id
-  - name: nft_metum
+  - name: nft_meta
     using:
       foreign_key_constraint_on: meta_id

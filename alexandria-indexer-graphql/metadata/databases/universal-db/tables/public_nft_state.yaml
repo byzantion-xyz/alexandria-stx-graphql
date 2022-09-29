@@ -2,7 +2,7 @@ table:
   name: nft_state
   schema: public
 object_relationships:
-  - name: nft_metum
+  - name: nft_meta
     using:
       foreign_key_constraint_on: meta_id
   - name: smart_contract

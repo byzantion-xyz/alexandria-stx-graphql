@@ -8,7 +8,7 @@ object_relationships:
   - name: commission
     using:
       foreign_key_constraint_on: commission_id
-  - name: nft_metum
+  - name: nft_meta
     using:
       foreign_key_constraint_on: nft_meta_id
   - name: smartContractBySmartContractId
