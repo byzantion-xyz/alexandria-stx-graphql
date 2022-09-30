@@ -15,7 +15,7 @@ Please refer to the repositories of these open source projects for all instructi
 
 ## Implementation
 
-Once you have the Data Lake and Indexer in place, you can start with the implementation of Alexandria STX GraphQL.
+Once you have the Data Lake and Indexer in place, you can start with the implementation of Alexandria STX GraphQL. You can also watch starlord walking you through the setup in the following video https://www.loom.com/share/8f5e70a9a7374cdfa1771f08dc79a823.
 
 ### Hasura
 
